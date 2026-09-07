@@ -1,0 +1,90 @@
+h1{
+    font-variant: small-caps;
+    font-size: xx-large;
+    color: black; /*teksti värv*/
+    background: transparent; /*tausta värv*/
+}
+header {
+    padding: 5%;
+    background-color: black;
+    border-left: 3px mediumvioletred;
+    border-bottom: 3px mediumvioletred;
+    border-radius: 0 0 0 60px;
+    background-image: url('Nimetu.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+footer{
+    padding: 5%;
+    background-color: red;
+    border-left: 3px mediumvioletred;
+    border-top: 3px mediumvioletred;
+    border-radius: 60px 0 0 0;
+}
+section#osa1{
+    padding: 3%;
+    border: 3px solid mediumvioletred;
+    margin: 50px;
+    width: 25%;
+}
+section#osa2{
+    padding: 2%;
+    border: 3px solid mediumvioletred;
+    margin: 50px;
+    width: 15%;
+}
+section#osa3{
+    padding: 4%;
+    border: 3px solid mediumvioletred;
+    margin: 50px;
+    width: 25%;
+}
+section#osa4{
+    padding: 4%;
+    border: 3px solid mediumvioletred;
+    margin: 50px;
+    width: 25%;
+}
+
+section#osa5{
+    padding: 4%;
+    border: 3px solid mediumvioletred;
+    margin: 50px;
+    width: 25%;
+}
+img{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px palevioletred;
+}
+/*navigeerimis menüü*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rebeccapurple;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    display: block;
+    color:palevioletred;
+    text-decoration: none; /*link on alljoonita */
+    text-align: center; /*teksti joondamine keskel*/
+    padding: 10px;
+    border-left: 3px mediumvioletred ;
+    border-radius: 20%;
+}
+nav{
+    padding: 5%;
+    margin-bottom: 20px;
+}
+nav ul li a:hover{
+    background-color: mediumvioletred;
+}
+
+
+
+
