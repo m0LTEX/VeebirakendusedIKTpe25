@@ -1,45 +1,52 @@
 h1{
     font-variant: small-caps;
     font-size: xx-large;
-    color: black; /*teksti värv*/
-    background: transparent; /*tausta värv*/
+    color: black;
+    background: transparent;
 }
+
 header {
     padding: 5%;
     background-color: black;
-    border-left: 3px mediumvioletred;
-    border-bottom: 3px mediumvioletred;
+    border-left: 3px solid mediumvioletred;
+    border-bottom: 3px solid mediumvioletred;
     border-radius: 0 0 0 60px;
+
     background-image: url('Nimetu.png');
     background-repeat: no-repeat;
     background-position: center center;
-
+    background-size: 200px;
 }
+
 footer{
     padding: 5%;
     background-color: red;
-    border-left: 3px mediumvioletred;
-    border-top: 3px mediumvioletred;
+    border-left: 3px solid mediumvioletred;
+    border-top: 3px solid mediumvioletred;
     border-radius: 60px 0 0 0;
 }
+
 section#osa1{
     padding: 3%;
     border: 3px solid mediumvioletred;
     margin: 50px;
     width: 25%;
 }
+
 section#osa2{
     padding: 2%;
     border: 5px solid mediumvioletred;
     margin: 50px;
     width: 15%;
 }
+
 section#osa3{
     padding: 4%;
     border: 3px solid mediumvioletred;
     margin: 50px;
     width: 25%;
 }
+
 section#osa4{
     padding: 4%;
     border: 3px solid mediumvioletred;
@@ -53,54 +60,71 @@ section#osa5{
     margin: 50px;
     width: 25%;
 }
+
 img#erapilt{
     width: 100%;
+    max-width: 200px;
     border-radius: 50%;
-    border: 5px palevioletred;
+    border: 5px solid palevioletred;
 }
-/*navigeerimis menüü*/
+
+
+/* navigeerimis menüü */
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: rebeccapurple;
+    overflow: hidden;
 }
+
 nav ul li{
     float: left;
 }
+
 nav ul li a{
     display: block;
-    color:palevioletred;
-    text-decoration: none; /*link on alljoonita */
-    text-align: center; /*teksti joondamine keskel*/
+    color: palevioletred;
+    text-decoration: none;
+    text-align: center;
     padding: 10px;
-    border-left: 3px mediumvioletred ;
+    border-left: 3px solid mediumvioletred;
     border-radius: 20%;
 }
+
 nav{
     padding: 5%;
     margin-bottom: 20px;
 }
+
 nav ul li a:hover{
     background-color: mediumvioletred;
 }
-#pildigalerii {
 
+
+/* meedia */
+
+#pildigalerii {
     display: grid;
     border: 3px solid mediumvioletred;
 }
+
 #video {
     display: grid;
     border: 3px solid mediumvioletred;
 }
+
 #musika {
     display: grid;
     border: 3px solid mediumvioletred;
 }
+
 #kaart {
     display: grid;
     border: 3px solid mediumvioletred;
 }
+
 #suurkast{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -108,5 +132,31 @@ nav ul li a:hover{
 }
 
 
+/* meedia pildid */
+
+#pildigalerii img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
 
 
+/* video */
+
+#video iframe {
+    max-width: 100%;
+}
+
+
+/* muusika */
+
+#musika iframe {
+    max-width: 100%;
+}
+
+
+/* kaart */
+
+#kaart iframe {
+    max-width: 100%;
+}
