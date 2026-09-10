@@ -1,89 +1,94 @@
-<!DOCTYPE html><!--deklaratsioon et kasutame html5-->
+<!DOCTYPE html><!--deklaratsioon et kasutame HTML5-->
 <!--kommentaar-->
 <html lang="et">
 <head> <!--tehniline info-->
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="Stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!--veebilehe sisu, mis kasutaja näeb-->
+<!--veebilehe sisu mida näeb kasutaja-->
 <!--päis-->
 <header>
     <h1>
         Mark veebirakenduste aluste tööd
-
     </h1>
 </header>
-<!--navegeerimismenüü-->
+<!--navigeerimismenüü-->
 <nav>
     <ul>
         <li>
             <a href="index.html">Avaleht</a>
         </li>
-        <Li>
-            <a href="Kontakt.html">Kontakt</a>
-        </Li>
-        <Li>
-            <a href="Tehtud.html">Tehtud tööd</a>
-        </Li>
-        <Li>
-            <a href="Lingid.html">Kasulikud lingid</a>
-        </Li>
-        <Li>
-            <a href="Meedia.html">Meedia</a>
-        </Li>
+        <li>
+            <a href="kontakt.html">Kontakt</a>
+        </li>
+        <li>
+            <a href="tehtud.html">Tehtud Töö</a>
+        </li>
+        <li>
+            <a href="lingid.html">Kasulikud lingid</a>
+        </li>
+        <li>
+            <a href="media.html">Media</a>
+        </li>
     </ul>
 </nav>
 <!--sisu-->
 <main>
-    <section id="osa1">
-<h2>Tere tulemast!</h2>
-        <p>See on veebirakendus tunnis
-            käsitsi kurjutatud leht!</p>
-        <br>
-        <br>
-        <p>palun kasuta navigeerimismenüü ,et leida info!</p>
-    </section>
+    <div id="suurkast">
+        <section id="pildigalerii">
+            <h2>pildigalerii</h2>
+            <img src="284-300x300.jpg" alt="tööriistad" loading="lazy">
+            <img src="663-300x300.jpg" alt="sild" loading="lazy">
+            <img src="728-300x300.jpg" alt="taevas" loading="lazy">
+            <img src="774-300x300.jpg" alt="meri" loading="lazy">
+            <img src="896-300x300.jpg" alt="päike" loading="lazy">
+            <img src="905-300x300.jpg" alt="mägi" loading="lazy">
+        </section>
 
-    <section id="osa2">
-        <h2>Päevapilt</h2>
-        <div>Ise tehtus pilt
-        <img src="Nimetu.png" alt="ma ei tea mis see on">
+        <section id="video">
+            <h2>video</h2>
+            <iframe width="560" height="315"
+                    src=<iframe width= "560" height="315" src="https://www.youtube.com/embed/fuiar1VuZ5A?si=0ady1pNIpHJUjB2f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+            </iframe>
+        </section>
 
-        </div>
-    </section>
-    <div id ="Suur kast">
-    <section id="pildigalerii">
-        <h2>Pildigalerii</h2>
-        <img src="https://picsum.photos/300/300?random=1"alt="random pilt1" loading="lazy">
-        <!--laading="lazy"-- pilt laaditakse vajadusel-->
-        <img src="https://picsum.photos/300/300?random=2">
-        <img src="https://picsum.photos/300/300?random=3">
-        <img src="https://picsum.photos/300/300?random=4">
-        <img src="https://picsum.photos/300/300?random=5">
-        <img src="https://picsum.photos/300/300?random=6">
-    </section>
-    <section id="video">
-        <h2>Video</h2>
-        <iframe width="450" height="310" src="https://www.youtube.com/embed/KsfvPdp6R4o?si=UyFbIg2G32426V-p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-    <section id="muusika">
-        <h2>Muusika</h2>
-        <iframe width="450" height="310" src="https://www.youtube.com/embed/XqZsoesa55w?si=NgoOndyaZkUDiQwA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-    <section id="kaart">
-        <h2>Kaart</h2>
-        <iframe width="450" height="310" src="https://www.google.com/maps/embed?pb=!4v1788768384999!6m8!1m7!1snOBK1yDOB7nGjRfkPumdMw!2m2!1d59.45325485315898!2d24.88762714050695!3f278.28871671990055!4f2.7633449724267507!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </section>
+        <section id="muusika">
+            <h2>muusika</h2>
+            <iframe width="100%" height="300"
+                    scrolling="no"
+                    frameborder="no"
+                    allow="autoplay; encrypted-media"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A160710200&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><iframe style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/sdslayer100" title="jman22227" target="_blank" style="color: #cccccc; text-decoration: none;">jman22227</a> · <a href="https://soundcloud.com/sdslayer100/stereo-madness" title="Stereo Madness" target="_blank" style="color: #cccccc; text-decoration: none;">Stereo Madness</a>
+        </iframe>
+        </section>
+
+        <section id="kaart">
+            <h2>kaart</h2>
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4060.5804437221764!2d24.70284893004518!3d59.41155362598373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294f1bd8cb15b%3A0xc372ff05bb27e9f4!2sTallinna%20T%C3%B6%C3%B6stushariduskeskus!5e0!3m2!1set!2see!4v1788767833963!5m2!1set!2see"
+                    width="600" height="450"
+                    style="border: 1px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+
+        </section>
     </div>
 </main>
 <!--jalus-->
 <footer>
     <div>
-        Mark-Leon Tjuska
+        Õpilase Mark-Leon Tjuska leht
     </div>
 </footer>
+
 
 </body>
 </html>
