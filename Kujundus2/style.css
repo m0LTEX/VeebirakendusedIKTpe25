@@ -1,0 +1,800 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: #f1f3ff;
+
+    color: #171a3a;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    min-height: 360px;
+
+    background:
+            radial-gradient(
+                    circle at 10% 20%,
+                    #6c63ff55,
+                    transparent 30%
+            ),
+            radial-gradient(
+                    circle at 90% 80%,
+                    #00c2ff44,
+                    transparent 30%
+            ),
+            #171a3a;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.logo {
+    position: absolute;
+
+    top: 30px;
+
+    left: 7%;
+
+    color: #00c2ff;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    letter-spacing: 6px;
+}
+
+
+.header-text {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.header-text p {
+    color: #00c2ff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+}
+
+
+.header-text h1 {
+    font-size: 62px;
+
+    margin: 20px 0 10px;
+
+    font-weight: 800;
+}
+
+
+.header-text span {
+    color: #bfc5e8;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   NAVIGEERIMINE
+========================= */
+
+.navigation {
+    width: 86%;
+
+    max-width: 1100px;
+
+    margin: -35px auto 0;
+
+    position: relative;
+
+    z-index: 10;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+
+.navigation a {
+    min-height: 75px;
+
+    background: white;
+
+    color: #303554;
+
+    text-decoration: none;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    box-shadow:
+            0 10px 30px #171a3a18;
+
+    transition: 0.25s;
+
+    border: 2px solid transparent;
+}
+
+
+.navigation a span {
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: #eef0ff;
+
+    color: #6c63ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.navigation a:hover {
+    transform: translateY(-7px);
+
+    border-color: #6c63ff;
+
+    color: #6c63ff;
+
+    box-shadow:
+            0 15px 35px #6c63ff30;
+}
+
+
+.navigation a.active {
+    background:
+            linear-gradient(
+                    135deg,
+                    #6c63ff,
+                    #00aeea
+            );
+
+    color: white;
+
+    box-shadow:
+            0 15px 35px #6c63ff45;
+}
+
+
+.navigation a.active span {
+    background: white;
+
+    color: #6c63ff;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 86%;
+
+    max-width: 1100px;
+
+    margin: 70px auto;
+}
+
+
+/* =========================
+   AVALeHT
+========================= */
+
+.welcome {
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 55px;
+
+    min-height: 330px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+            0 15px 40px #171a3a12;
+}
+
+
+.welcome-text small {
+    color: #6c63ff;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+
+.welcome-text h2 {
+    font-size: 45px;
+
+    max-width: 650px;
+
+    margin: 20px 0;
+}
+
+
+.welcome-text p {
+    max-width: 650px;
+
+    color: #656a88;
+
+    line-height: 1.8;
+}
+
+
+.big-number {
+    font-size: 120px;
+
+    font-weight: bold;
+
+    color: #eef0ff;
+}
+
+
+/* =========================
+   KAARDID
+========================= */
+
+.three-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+
+.three-cards div {
+    background: #171a3a;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border-bottom: 5px solid #6c63ff;
+}
+
+
+.three-cards span {
+    color: #00c2ff;
+
+    font-size: 13px;
+}
+
+
+.three-cards h3 {
+    font-size: 25px;
+
+    margin: 15px 0 8px;
+}
+
+
+.three-cards p {
+    color: #adb4d7;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   LEHE PEALKIRI
+========================= */
+
+.page-title {
+    margin-bottom: 45px;
+}
+
+
+.page-title small {
+    color: #6c63ff;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.page-title h2 {
+    font-size: 45px;
+
+    margin: 15px 0 8px;
+}
+
+
+.page-title p {
+    color: #656a88;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   KONTAKT
+========================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.contact-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+            0 10px 30px #171a3a12;
+
+    transition: 0.25s;
+}
+
+
+.contact-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+            0 15px 35px #6c63ff30;
+}
+
+
+.contact-icon {
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+
+.contact-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+.contact-card p {
+    color: #656a88;
+}
+
+
+/* =========================
+   TEHTUD TÖÖ
+========================= */
+
+.work-list {
+    display: grid;
+
+    gap: 20px;
+}
+
+
+.work-list article {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    gap: 25px;
+
+    box-shadow:
+            0 10px 30px #171a3a12;
+
+    transition: 0.25s;
+}
+
+
+.work-list article:hover {
+    transform: translateX(8px);
+
+    box-shadow:
+            0 15px 35px #6c63ff25;
+}
+
+
+.work-number {
+    color: #6c63ff;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+.work-list h3 {
+    margin-top: 0;
+
+    font-size: 25px;
+}
+
+
+.work-list p {
+    color: #656a88;
+
+    line-height: 1.7;
+}
+
+
+.tag {
+    display: inline-block;
+
+    background: #eef0ff;
+
+    color: #6c63ff;
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   LINGID
+========================= */
+
+.link-list {
+    display: grid;
+
+    gap: 15px;
+}
+
+
+.link-list a {
+    background: white;
+
+    color: #171a3a;
+
+    text-decoration: none;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow:
+            0 10px 30px #171a3a12;
+
+    transition: 0.25s;
+}
+
+
+.link-list a:hover {
+    transform: translateX(8px);
+
+    box-shadow:
+            0 15px 35px #6c63ff25;
+}
+
+
+.link-list a > span {
+    width: 45px;
+
+    height: 45px;
+
+    background: #6c63ff;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+.link-list h3 {
+    margin: 0 0 5px;
+}
+
+
+.link-list p {
+    margin: 0;
+
+    color: #656a88;
+}
+
+
+.link-list strong {
+    margin-left: auto;
+
+    color: #6c63ff;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   MEEDIA
+========================= */
+
+.section-heading {
+    font-size: 26px;
+
+    margin-top: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+/* PILDID */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.gallery img {
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    background: white;
+
+    padding: 8px;
+
+    border-radius: 15px;
+
+    box-shadow:
+            0 10px 30px #171a3a15;
+
+    transition: 0.25s;
+}
+
+
+.gallery img:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+            0 15px 35px #6c63ff30;
+}
+
+
+/* VIDEO + MUUSIKA */
+
+.media-box {
+    background: #171a3a;
+
+    padding: 10px;
+
+    border-radius: 18px;
+
+    box-shadow:
+            0 10px 30px #171a3a25;
+}
+
+
+.media-box iframe {
+    width: 100%;
+
+    height: 450px;
+
+    border: 0;
+
+    display: block;
+
+    border-radius: 10px;
+}
+
+
+/* KAART */
+
+.map-box {
+    height: 450px;
+
+    background: #171a3a;
+
+    padding: 10px;
+
+    border-radius: 18px;
+
+    box-shadow:
+            0 10px 30px #171a3a25;
+}
+
+
+.map-box iframe {
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #171a3a;
+
+    color: #aeb4d6;
+
+    padding: 35px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+footer strong {
+    color: #00c2ff;
+
+    font-size: 22px;
+
+    letter-spacing: 4px;
+}
+
+
+footer p {
+    margin: 0;
+}
+
+
+/* =========================
+   TELEFON
+========================= */
+
+@media (max-width: 800px) {
+
+    header {
+        min-height: 320px;
+    }
+
+
+    .header-text h1 {
+        font-size: 42px;
+    }
+
+
+    .navigation {
+        width: 92%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        margin-top: -25px;
+    }
+
+
+    .navigation a {
+        min-height: 60px;
+
+        font-size: 12px;
+    }
+
+
+    main {
+        width: 92%;
+
+        margin: 50px auto;
+    }
+
+
+    .welcome {
+        padding: 30px;
+
+        display: block;
+    }
+
+
+    .welcome-text h2 {
+        font-size: 35px;
+    }
+
+
+    .big-number {
+        display: none;
+    }
+
+
+    .three-cards,
+    .contact-grid,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .work-list article {
+        flex-direction: column;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+}
