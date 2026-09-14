@@ -27,3 +27,65 @@ table#roheline td{
     border: 1px solid green;
     text-align: center;
 }
+/*pseudoelementide kasutamine*/
+/*1.rida 1.lahter*/
+#punane tr:nth-child(1) td:nth-child(1){
+ background-color: red;
+    /*1.rida 2.lahter*/
+}
+#lilla {
+    border-collapse: collapse;
+}
+
+#lilla td {
+    width: 60px;
+    height: 50px;
+    border: 1px solid purple;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#lilla td:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+
+
+#lilla td:nth-child(1) td:nth-child(2){
+    background-color: red;
+}
+
+
+
+#lilla td:nth-child(2) td:nth-child(1){
+    background-color: red;
+}
+
+
+
+#lilla td:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+
+
+
+#lilla td:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+
+
+#lilla td:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+
+
+
+#lilla td:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+
+
+
+#lilla td:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+
