@@ -1,9 +1,18 @@
+h1#Lipud{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+}
+
 #eesti{
     width: 330px;
     height: 210px;
     border: 1px solid grey;
     border-spacing: 0;
     /*border-collapse: collapse;*/
+    position: absolute;
+    top:60px;
+    left:50%;
 }
 #eesti tr:nth-child(1) {
     background-color: blue;
@@ -15,4 +24,110 @@
 
 #eesti tr:nth-child(3) {
     background-color: white;
+}
+
+#rootsi{
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+/*border-collapse: collapse;*/
+    position: absolute;
+    top:310px;
+    left:50%;
+}
+#rootsi tr:nth-child(2) {
+    background-color: gold;
+    height: 50px;
+}
+#rootsi tr:nth-child(1) td:nth-child(1),
+#rootsi tr:nth-child(3) td:nth-child(1) {
+    background-color: blue;
+    width: 100px;
+}
+#rootsi tr:nth-child(1) td:nth-child(3),
+#rootsi tr:nth-child(3) td:nth-child(3) {
+    background-color: blue;
+    width: 175px;
+}
+#rootsi tr:nth-child(1) td:nth-child(2),
+#rootsi tr:nth-child(3) td:nth-child(2) {
+    background-color: gold;
+}
+
+#prantsusmaa{
+    width: 330px;
+    height: 210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    /*border-collapse: collapse;*/
+    position: absolute;
+    top:560px;
+    left:50%;
+}
+
+    #prantsusmaa tr:nth-child(1) td:nth-child(1){
+        background-color: blue;
+    }
+
+    #prantsusmaa tr:nth-child(1) td:nth-child(2){
+        background-color: white;
+    }
+
+    #prantsusmaa tr:nth-child(1) td:nth-child(3){
+        background-color: red;
+    }
+
+#šveits{
+    width: 330px;
+    height: 210px;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    position: absolute;
+    top: 820px;
+    left: 50%;
+}
+#šveits tr:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+#šveits tr:nth-child(2) td:nth-child(1){
+    background-color: red;
+}
+#šveits tr:nth-child(2) td:nth-child(2){
+    background-color: red;
+}
+#šveits tr:nth-child(2) td:nth-child(4){
+    background-color: red;
+}
+#šveits tr:nth-child(2) td:nth-child(5){
+    background-color: red;
+}
+#šveits tr:nth-child(3) td:nth-child(1){
+    background-color: red;
+}
+#šveits tr:nth-child(4) td:nth-child(1){
+    background-color: red;
+}
+#šveits tr:nth-child(4) td:nth-child(2){
+    background-color: red;
+}
+#šveits tr:nth-child(4) td:nth-child(4){
+    background-color: red;
+}
+#šveits tr:nth-child(4) td:nth-child(5){
+    background-color: red;
+}
+#šveits tr:nth-child(5) td:nth-child(1){
+    background-color: red;
+}
+#šveits tr:nth-child(3) td:nth-child(5){
+    background-color: red;
+}
+#šveits tr:nth-child(3) td:nth-child(2){
+    background-color: white;
+    height: 40px;
+}
+#šveits tr:nth-child(2) td:nth-child(3){
+    background-color: white;
+    width: 50px;
 }

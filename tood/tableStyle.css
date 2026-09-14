@@ -89,3 +89,16 @@ table#roheline td{
     background-color: red;
 }
 
+
+table#roosa {
+    border: 1px red solid;
+    width: 30%;
+    height: 200px;
+}
+
+table#roosa td{
+    border: 1px solid red;
+    text-align: center;
+}
+
+
