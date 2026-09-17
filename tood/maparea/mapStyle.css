@@ -1,0 +1,11 @@
+div#selgitus{
+    background-color: lightgray;
+    width: 30%;
+    position: absolute;
+    top: 150px;
+    left: 400px;
+}
+img{
+    border: 5px solid lightgray;
+    border-radius: 60%;
+}

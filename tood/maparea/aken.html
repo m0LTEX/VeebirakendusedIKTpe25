@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Map area kasutamine</title>
+    <link rel="stylesheet" href="mapStyle.css">
+</head>
+<body>
+<h1>Lehel on kasutatud map area käsud</h1>
+<h2>palun kliki hiirega pildi erineva alale </h2>
+<img src="maja.png" alt="ilus maja" usemap="#majakaart">
+<!-- kasutame map'i (kaart) -->
+<map name="majakaart">
+    <!-- ring -circle coords=x, y, R-->
+    <area shape="circle" coords="232,87,50" href="aken.html" alt="aken">
+    <!-- riskülik rect coords=x, y, x1, y2-->
+<area shape="297,20,335,4" coords="korsten.html" href="" alt="hall korsten">
+<!-- mitu nurga plügoon -poly  coords=x, y, x1, y1, x2, y2-kolmunrk-->
+    <area shape="poly" coords="109,133,238,3,161,139" href="katus.html" alt="katus">
+</map>
+<div id="selgitus">
+    Tänapäeval on aknad tavaliselt klaasitud või kaetud mõne muu läbipaistva materjaliga.[1] Ka lükandosad ja raam viitavad aknale.[2] Paljusid hoonete või sõidukite klaasitud aknaid saab avada, et ruumi ventileerida või sulgeda, et vältida väliseid ilmaolusid. Enamasti on akendel riiv või muu mehhanism, mille abil saab aknaid sulgeda või avada. Sedamööda, kuidas hoonetes on levinud sundventilatsioon, mis võimaldab õhuvahetust akent avamata, on hakatud ehitama ka mitteavanevaid aknaid.
+</div>
+</body>
+</html>

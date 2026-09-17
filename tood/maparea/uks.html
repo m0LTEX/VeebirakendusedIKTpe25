@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Map area kasutamine</title>
+    <link rel="stylesheet" href="mapStyle.css">
+</head>
+<body>
+<h1>Lehel on kasutatud map area käsud</h1>
+<h2>palun kliki hiirega pildi erineva alale </h2>
+<img src="maja.png" alt="ilus maja" usemap="#majakaart">
+<!-- kasutame map'i (kaart) -->
+<map name="majakaart">
+    <!-- ring -circle coords=x, y, R-->
+    <area shape="circle" coords="232,87,50" href="aken.html" alt="aken">
+
+    <!-- riskülik rect coords=x, y, x1, y2-->
+    <area shape="rect" coords="297,33,323,36" href="korsten.html" alt="korsten">
+
+    <!-- mitu nurga plügoon -poly  coords=x, y, x1, y1, x2, y2-kolmunrk-->
+    <area shape="poly" coords="109,133,238,3,161,139" href="katus.html" alt="katus">
+    <!-- riskülik rect coords=x, y, x1, y2-->
+    <area shape="door" coords="212,327,252,351" href="uks.html" alt="uks">
+</map>
+<div id="selgitus">
+    Uks on tarind, mille abil saab hoonesse või ruumi sissepääsu ja sellest väljapääsu võimaldamiseks mõeldud ava sulgeda. Selleks asetatakse uks nii, et ta sisse- ja väljapääsuava tihedalt kataks.
+</div>
+</body>
+</html>
