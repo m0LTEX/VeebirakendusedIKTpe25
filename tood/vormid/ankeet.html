@@ -98,7 +98,7 @@
         </tr>
         <tr>
             <td>
-                <label for="kuupäev">millal oli su viimane trenn?</label>
+                <label for="kuupäev">Millal oli su viimane trenn?</label>
             </td>
             <td>
                 <input type="date" id="kuupäev" min="2026-01-01" max="2026-12-31">
@@ -109,11 +109,48 @@
         </tr>
         <tr>
             <td>
-                <labe></labe>
+                <label for="email">Sisesta enda E-mail:</label>
             </td>
             <td>
                 <input type="email">
-
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password">Sisesta enda parool:</label>
+            </td>
+            <td>
+                <input type="password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="raadio">Mis raadio sa parem kuulaksid trenni ajal?</label>
+            </td>
+            <td>
+                <select name="raadio" id="raadio">
+                    <option value="vali">Vali...</option>
+                    <option value="eestifmraadio">EestiFM</option>
+                    <option value="startfm">StarFM</option>
+                    <option value="skyplus">SKYplus</option>
+                    <option value="retrofm">RetroFM</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="tel">Sisesta enda telefoni number:</label>
+            </td>
+            <td>
+                <input type="tel">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="time">Kui kaua sul kestab trenn?</label>
+            </td>
+            <td>
+                <input type="time" min="00:00:00" max="23:59:59">
             </td>
         </tr>
     </table>
