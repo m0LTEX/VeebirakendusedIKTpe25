@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Muusika</title>
+  <script src="../js/muusikascript.js"></script>
+</head>
+<body>
+<from action="#">
+  <table border="1">
+    <tr>
+    <td colspan="2">
+      <fieldset>
+        <legend>
+          <strong>Muusikud</strong>
+        </legend>
+        <br>
+        <input type="checkbox" name="Muusikud" id="Yeat" value="Yeat" onchange="Muusikud()">
+        <label for="Yeat">Yeat</label>
+        <br>
+        <input type="checkbox" name="Muusikud" id="TravisScott" value="TravisScott" onchange="Muusikud()">
+        <label for="TravisScott">Travis Scott</label>
+      </fieldset>
+    </td>
+      <td>
+        <div id="vastus1"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Mida arvad muusika kuulamisest koolis?</label>
+      </td>
+      <td>
+        <input type="text" id="nimi" oninput="kool()" >
+      </td>
+      <td>
+        <div id="vastus2"></div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label>Mitu tundi päevas kuulad muusikat?</label>
+      </td>
+      <td>
+        <input type="number" min="0" max="24" step="1" value="0" id="tund" oninput="Muusikatunnid()" >
+      </td>
+      <td>
+        <div id="vastus3"></div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label>Kas sa kuulad radiot?</label>
+      </td>
+      <td>
+        <input type="radio" name="valik" id="Ja" value="Ja"  onclick="raadiokuulamine()">
+        <label for="Ja">Ja</label>
+
+        <input type="radio" name="valik" id="Ei" value="Ei"  onclick="raadiokuulamine()">
+        <label for="Ei">Ei</label>
+      </td>
+      <td>
+        <div id="vastus4">
+        </div>
+
+
+  </table>
+</from>
+
+</body>
+</html>

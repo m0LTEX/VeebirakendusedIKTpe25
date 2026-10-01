@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Vormid ja nupud HTML keeles</title>
+    <script src="../js/ankeetScript.js"></script>
 </head>
 <body>
 <h1>Sportlase ankeet</h1>
@@ -14,7 +15,12 @@
                 <label for="nimi">Sisesta oma nimi:</label>
             </td>
             <td>
-                <input type="text" id="nimi">
+                <input type="text" id="nimi" oninput="nimiLugemine()">
+            </td>
+            <td>
+                <div id="vastus">
+
+                </div>
             </td>
         </tr>
 
@@ -26,14 +32,19 @@
             </td>
             <td>
                 <!-- radionupp - ainult üks valik on õige -->
-                <input type="radio" name="sugu" id="naine">
+                <input type="radio" name="sugu" id="naine" value="naine" onclick="suguValik()">
                 <label for="naine">naine</label>
                 <br>
-                <input type="radio" name="sugu" id="mees">
+                <input type="radio" name="sugu" id="mees" value="mees" onclick="suguValik()">
                 <label for="mees">mees</label>
                 <br>
-                <input type="radio" name="sugu" id="muu">
+                <input type="radio" name="sugu" id="muu" value="muu" onclick="suguValik()">
                 <label for="muu">muu</label>
+            </td>
+            <td>
+                <div id="vastus2">
+
+                </div>
             </td>
         </tr>
 
@@ -44,21 +55,26 @@
                         <strong>Spordialad:</strong>
                     </legend>
                     <br>
-                    <input type="checkbox" name="spordiala" id="jooksmine">
+                    <input type="checkbox" name="spordiala" id="jooksmine" value="jooksmine" onchange="sportValik()">
                     <label for="jooksmine">jooksmine</label>
                     <br>
-                    <input type="checkbox" name="spordiala" id="ujumine">
+                    <input type="checkbox" name="spordiala" id="ujumine" value="ujumine" onchange="sportValik()">
                     <label for="ujumine">ujumine</label>
                     <br>
-                    <input type="checkbox" name="spordiala" id="uisutamine">
+                    <input type="checkbox" name="spordiala" id="uisutamine" value="uisutamine" onchange="sportValik()">
                     <label for="uisutamine">uisutamine</label>
                     <br>
-                    <input type="checkbox" name="spordiala" id="suusatamine">
+                    <input type="checkbox" name="spordiala" id="suusatamine" value="suusatamine" onchange="sportValik()">
                     <label for="suusatamine">suusatamine</label>
                     <br>
-                    <input type="checkbox" name="spordiala" id="jalgpall">
-                    <label for="jalgpall">jalgpall</label>
+                    <input type="checkbox" name="spordiala" id="poks" value="poks" onchange="sportValik()">
+                    <label for="poks">jalgpall</label>
                 </fieldset>
+            </td>
+            <td>
+                <div id="vastus3">
+
+                </div>
             </td>
         </tr>
 
@@ -78,79 +94,108 @@
                 <label for="klubi">Mis klubi sa külastad?</label>
             </td>
             <td>
-
-                <select name="klubi" id="klubi">
-                    <option value="vali">Vali...</option>
+                <select name="klubi" id="klubi" onchange="klubiValik()">
+                    <option value="vali">vali...</option>
                     <option value="gym">GYM</option>
                     <option value="myfitness">myfitness</option>
-                    <option value="gym25">GYM24</option>
+                    <option value="gym24">GYM24</option>
                     <option value="kalevspa">KalevSPA</option>
                 </select>
             </td>
+            <td>
+                <div id="vastus5">
+
+                </div>
+            </td>
         </tr>
+
         <tr>
             <td>
                 <label for="varv">Mis värvi tossud sul on?</label>
             </td>
             <td>
                 <input type="color" id="varv">
-        </td>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="kuupaev">Millal oli su viimane trenn</label>
+            </td>
+            <td>
+                <input type="date" id="kuupaev" min="2026-01-01" max="2026-12-31" onchange="kuupaevValik()">
+            </td>
+            <td>
+                <div id="vastus6">
+
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="aeg">Mis ajal päevast te tavaliselt trenni teete?</label>
+            </td>
+            <td>
+                <input type="time" id="aeg" name="aeg">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="kogemus">Treening Kogemus:</label>
+            </td>
+            <td>
+                <input type="range" id="kogemus" min="0" max="24" onchange="rangeValik()">
+            </td>
+            <td>
+                <div id="vastus7">
+
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="mon"> Mis kuus teete kõige rohkem trenni?</label>
+            </td>
+            <td>
+                <input type="month" id="mon" name="mon" min="2026" max="2026">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="email">Siesta oma Email:</label>
+            </td>
+            <td>
+                <input type="email" name="email" id="email" >
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="file">Näidake pilti endast</label>
+            </td>
+            <td>
+                <input type="file" id="file" name="file">
+            </td>
         </tr>
         <tr>
             <td>
-                <label for="kuupäev">Millal oli su viimane trenn?</label>
+                <input type="reset" value="Puhasta" onclick="puhasta()">
             </td>
             <td>
-                <input type="date" id="kuupäev" min="2026-01-01" max="2026-12-31">
-            </td>
-        </tr>
-        <tr>
-            Kasuta w3scholls ja proovi ise input type, vali ise 5 erineva tk
-        </tr>
-        <tr>
-            <td>
-                <label for="email">Sisesta enda E-mail:</label>
+                <input type="button" value="Näita andmed" onclick="tervitus()">
             </td>
             <td>
-                <input type="email">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="password">Sisesta enda parool:</label>
-            </td>
-            <td>
-                <input type="password">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="file">Saada enda poksi pasporti pilt:</label>
-            </td>
-            <td>
-                <input type="file">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="tel">Sisesta enda telefoni number:</label>
-            </td>
-            <td>
-                <input type="tel">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="time">Kui kaua sul kestab trenn?</label>
-            </td>
-            <td>
-                <input type="time" min="00:00:00" max="23:59:59">
+                <div id="vastus4">
+
+                </div>
             </td>
         </tr>
     </table>
-
 </form>
-<br>
-<a href="http://localhost:63342/VeebirakendusedIKTpe25/index.html">Tagasi Kodulehele</a>
+
 </body>
 </html>
