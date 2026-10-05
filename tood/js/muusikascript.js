@@ -2,39 +2,43 @@ function Muusikud(){
     let vastus1=document.getElementById("vastus1");
     let Yeat=document.getElementById("Yeat");
     let TravisScott=document.getElementById("TravisScott");
-    let muusika="";
+    let Shakira=document.getElementById("Shakira");
+    let ViktorTsoi=document.getElementById("ViktorTsoi");
+    let Haddaway=document.getElementById("Haddaway");
+
     if(Yeat.checked){
         muusika +=Yeat.value + ", ";
     }
     if(TravisScott.checked){
         muusika +=TravisScott.value + ", ";
     }
-    if(muusika == ""){
-        muusika = "";
+    if(Shakira.checked){
+        muusika +=Shakira.value + ", ";
     }
-    vastus1.innerHTML="Sinu valitud muusikud: " + muusika;
+    if(ViktorTsoi.checked){
+        muusika +=ViktorTsoi.value + ", ";
+    }
+    if(Haddaway.checked){
+        muusika +=Haddaway.value + ", ";
+    }
 
+    vastus1.innerHTML="Sinu valitud muusikud: " + muusika;
     return muusika;
 }
-
 
 function kool(){
     let nimi=document.getElementById("nimi");
     let vastus2=document.getElementById("vastus2");
     vastus2.innerHTML="Sinu arvamus: " + nimi.value;
-
     return nimi.value;
 }
-
 
 function Muusikatunnid(){
     let tund=document.getElementById("tund");
     let vastus3=document.getElementById("vastus3");
     vastus3.innerHTML="Sa kuulad muusikat " + tund.value + " tundi päevas";
-
     return tund.value;
 }
-
 
 function raadiokuulamine(){
     let Ja=document.getElementById("Ja");
@@ -59,14 +63,12 @@ function raadioJaam(){
     let vastus5=document.getElementById("vastus5");
     let radiojaam=document.getElementById("radiojaam");
     vastus5.innerHTML="Sinu nimetatud jaamad: " + radiojaam.value;
-
     return radiojaam.value;
 }
 
 function muusikastiilid(){
 
     let vastus6=document.getElementById("vastus6");
-
     let pop=document.getElementById("pop");
     let rock=document.getElementById("rock");
     let räpp=document.getElementById("räpp");
@@ -97,10 +99,8 @@ function muusikastiilid(){
         stiil="vali mingi stiil";
     }
     vastus6.innerHTML="Sinu vastus: " + stiil;
-
     return stiil;
 }
-
 
 function tervitus(){
     let vastus7=document.getElementById("vastus7");
@@ -145,6 +145,9 @@ function Puhasta(){
 
     document.getElementById("Yeat").checked=false;
     document.getElementById("TravisScott").checked=false;
+    document.getElementById("Shakira").checked=false;
+    document.getElementById("ViktorTsoi").checked=false;
+    document.getElementById("Haddaway").checked=false;
 
     document.getElementById("Ja").checked=false;
     document.getElementById("Ei").checked=false;
