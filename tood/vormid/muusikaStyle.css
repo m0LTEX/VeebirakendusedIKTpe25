@@ -1,0 +1,36 @@
+body {
+    background-color: lightpink;
+    padding: 40px;
+}
+
+table {
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+td {
+    padding: 15px 15px;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: yellow;
+    margin-right: 6px;
+}
+
+
+.vastus {
+    border: 1px gray solid;
+    width: 250px;
+    min-height: 25px;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}

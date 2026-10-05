@@ -1,30 +1,31 @@
-function Muusikud(){
-    let vastus1=document.getElementById("vastus1");
-    let Yeat=document.getElementById("Yeat");
-    let TravisScott=document.getElementById("TravisScott");
-    let Shakira=document.getElementById("Shakira");
-    let ViktorTsoi=document.getElementById("ViktorTsoi");
-    let Haddaway=document.getElementById("Haddaway");
+function Muusikud() {
+    let vastus1 = document.getElementById("vastus1");
+    let Yeat = document.getElementById("Yeat");
+    let TravisScott = document.getElementById("TravisScott");
+    let Shakira = document.getElementById("Shakira");
+    let ViktorTsoi = document.getElementById("ViktorTsoi");
+    let Haddaway = document.getElementById("Haddaway");
+    let muusika = "";
 
-    if(Yeat.checked){
-        muusika +=Yeat.value + ", ";
+    if (Yeat.checked) {
+        muusika += Yeat.value + ", ";
     }
-    if(TravisScott.checked){
-        muusika +=TravisScott.value + ", ";
+    if (TravisScott.checked) {
+        muusika += TravisScott.value + ", ";
     }
-    if(Shakira.checked){
-        muusika +=Shakira.value + ", ";
+    if (Shakira.checked) {
+        muusika += Shakira.value + ", ";
     }
-    if(ViktorTsoi.checked){
-        muusika +=ViktorTsoi.value + ", ";
+    if (ViktorTsoi.checked) {
+        muusika += ViktorTsoi.value + ", ";
     }
-    if(Haddaway.checked){
-        muusika +=Haddaway.value + ", ";
+    if (Haddaway.checked) {
+        muusika += Haddaway.value + ", ";
     }
-
-    vastus1.innerHTML="Sinu valitud muusikud: " + muusika;
+    vastus1.innerHTML = "Sinu valitud muusikud: " + muusika;
     return muusika;
 }
+
 
 function kool(){
     let nimi=document.getElementById("nimi");
