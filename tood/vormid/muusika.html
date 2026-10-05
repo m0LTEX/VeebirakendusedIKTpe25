@@ -12,7 +12,7 @@
       <td colspan="2">
         <fieldset>
           <legend>
-            <strong>Muusikud</strong>
+            <strong>Muusika küsimustik</strong>
           </legend>
           <br>
           <input type="checkbox" name="Muusikud" id="Yeat" value="Yeat" onchange="Muusikud()">
@@ -48,13 +48,7 @@
       </td>
 
       <td>
-        <input type="number"
-               min="0"
-               max="24"
-               step="1"
-               value="0"
-               id="tund"
-               oninput="Muusikatunnid()">
+        <input type="number" min="0" max="24" step="1" value="0" id="tund" oninput="Muusikatunnid()">
       </td>
 
       <td>
@@ -68,19 +62,11 @@
       </td>
 
       <td>
-        <input type="radio"
-               name="valik"
-               id="Ja"
-               value="Ja"
-               onchange="raadiokuulamine()">
+        <input type="radio" name="valik" id="Ja" value="Ja" onchange="raadiokuulamine()">
 
         <label for="Ja">Ja</label>
 
-        <input type="radio"
-               name="valik"
-               id="Ei"
-               value="Ei"
-               onchange="raadiokuulamine()">
+        <input type="radio" name="valik" id="Ei" value="Ei" onchange="raadiokuulamine()">
 
         <label for="Ei">Ei</label>
       </td>
@@ -98,9 +84,7 @@
       </td>
 
       <td>
-        <input type="text"
-               id="radiojaam"
-               oninput="raadioJaam()">
+        <input type="text" id="radiojaam" oninput="raadioJaam()">
       </td>
 
       <td>
@@ -115,51 +99,22 @@
 
       <td>
 
-        <input type="checkbox"
-               name="stiil"
-               id="räpp"
-               value="räpp"
-               onchange="muusikastiilid()">
+        <input type="checkbox" name="stiil" id="räpp" value="räpp" onchange="muusikastiilid()">
         <label for="räpp">Räpp</label>
         <br>
-
-        <input type="checkbox"
-               name="stiil"
-               id="pop"
-               value="pop"
-               onchange="muusikastiilid()">
+        <input type="checkbox" name="stiil" id="pop" value="pop" onchange="muusikastiilid()">
         <label for="pop">Pop</label>
         <br>
-
-        <input type="checkbox"
-               name="stiil"
-               id="rock"
-               value="rock"
-               onchange="muusikastiilid()">
+        <input type="checkbox" name="stiil" id="rock" value="rock" onchange="muusikastiilid()">
         <label for="rock">Rock</label>
         <br>
-
-        <input type="checkbox"
-               name="stiil"
-               id="elektrooniline"
-               value="elektrooniline"
-               onchange="muusikastiilid()">
+        <input type="checkbox" name="stiil" id="elektrooniline" value="elektrooniline" onchange="muusikastiilid()">
         <label for="elektrooniline">Elektrooniline</label>
         <br>
-
-        <input type="checkbox"
-               name="stiil"
-               id="jazz"
-               value="jazz"
-               onchange="muusikastiilid()">
+        <input type="checkbox" name="stiil" id="jazz" value="jazz" onchange="muusikastiilid()">
         <label for="jazz">Jazz</label>
         <br>
-
-        <input type="checkbox"
-               name="stiil"
-               id="klassikaline"
-               value="klassikaline"
-               onchange="muusikastiilid()">
+        <input type="checkbox" name="stiil" id="klassikaline" value="klassikaline" onchange="muusikastiilid()">
         <label for="klassikaline">Klassikaline</label>
 
       </td>
@@ -172,15 +127,11 @@
 
     <tr>
       <td>
-        <input type="button"
-               value="Puhasta"
-               onclick="Puhasta()">
+        <input type="button" value="Puhasta" onclick="Puhasta()">
       </td>
 
       <td>
-        <input type="button"
-               value="Näita andmed"
-               onclick="tervitus()">
+        <input type="button" value="Näita andmed" onclick="tervitus()">
       </td>
 
       <td>

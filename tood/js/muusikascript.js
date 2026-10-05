@@ -1,23 +1,17 @@
 function Muusikud(){
-
     let vastus1=document.getElementById("vastus1");
     let Yeat=document.getElementById("Yeat");
     let TravisScott=document.getElementById("TravisScott");
-
     let muusika="";
-
     if(Yeat.checked){
         muusika +=Yeat.value + ", ";
     }
-
     if(TravisScott.checked){
         muusika +=TravisScott.value + ", ";
     }
-
     if(muusika == ""){
         muusika = "";
     }
-
     vastus1.innerHTML="Sinu valitud muusikud: " + muusika;
 
     return muusika;
@@ -25,10 +19,8 @@ function Muusikud(){
 
 
 function kool(){
-
     let nimi=document.getElementById("nimi");
     let vastus2=document.getElementById("vastus2");
-
     vastus2.innerHTML="Sinu arvamus: " + nimi.value;
 
     return nimi.value;
@@ -36,10 +28,8 @@ function kool(){
 
 
 function Muusikatunnid(){
-
     let tund=document.getElementById("tund");
     let vastus3=document.getElementById("vastus3");
-
     vastus3.innerHTML="Sa kuulad muusikat " + tund.value + " tundi päevas";
 
     return tund.value;
@@ -47,35 +37,27 @@ function Muusikatunnid(){
 
 
 function raadiokuulamine(){
-
     let Ja=document.getElementById("Ja");
     let Ei=document.getElementById("Ei");
     let vastus4=document.getElementById("vastus4");
-
     let valik="";
 
     if(Ja.checked){
         valik=Ja.value;
     }
-
     else if(Ei.checked){
         valik=Ei.value;
     }
-
     else{
         valik="palun tee valik";
     }
-
     vastus4.innerHTML="Raadio kuulamine: " + valik;
-
     return valik;
 }
 
 function raadioJaam(){
-
     let vastus5=document.getElementById("vastus5");
     let radiojaam=document.getElementById("radiojaam");
-
     vastus5.innerHTML="Sinu nimetatud jaamad: " + radiojaam.value;
 
     return radiojaam.value;
@@ -114,7 +96,6 @@ function muusikastiilid(){
     if(stiil ==""){
         stiil="vali mingi stiil";
     }
-
     vastus6.innerHTML="Sinu vastus: " + stiil;
 
     return stiil;
@@ -122,16 +103,13 @@ function muusikastiilid(){
 
 
 function tervitus(){
-
     let vastus7=document.getElementById("vastus7");
-
     let muusika=Muusikud();
     let nimi=kool();
     let tund=Muusikatunnid();
     let valik=raadiokuulamine();
     let raadiojaam=raadioJaam();
     let stiil=muusikastiilid();
-
 
     vastus7.innerHTML="Valitud muusikud on " + muusika + "<br>"
         +"Arvamus muusika kuulamisest koolis: " + nimi + "<br>"
@@ -142,7 +120,6 @@ function tervitus(){
 
     vastus7.style.backgroundColor="white";
 }
-
 
 function Puhasta(){
 
