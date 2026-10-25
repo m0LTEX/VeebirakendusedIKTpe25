@@ -3,8 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <title>JS objektid ja meetodid</title>
+    <h2>Auto objekt</h2>
+    <div id="auto"></div>
+    <h2>Objektide massiiv</h2>
+    <div id="autod"></div>
 </head>
 <body>
+
+<h1>JS: Objektid ja meetodid</h1>
+
+<h2>Raamatu objekt</h2>
+<div id="raamat"></div>
+
+<h2>Raamatukogu</h2>
+<div id="raamatud"></div>
+
+<h2>Statistika</h2>
+<div id="statistika"></div>
+
+<script>
+    let auto = {
+        mark: "Toyota",
+        mudel: "Corolla",
+        aasta: 2022,
+        varv: "punane",
+        lisavarustus: ["kliimaseade", "elektriaknad", "navigatsioonisüsteem"],
+
+        taisnimi() {
+            return this.mark + " " + this.mudel;
+        },
+
+        kuvaOmadused() {
+            this.lisavarustus.forEach(function(omadus) {
+                console.log(omadus);
+            });
+        }
+    };
+
+    console.log(auto);
+    console.log(auto.mark);
+    console.log(auto.mudel);
+    console.log(auto.aasta);
+    console.log(auto.varv);
+    console.log(auto.lisavarustus);
+    console.log(auto.taisnimi());
+    auto.kuvaOmadused();
+
+    document.getElementById("auto").innerHTML =
+        "<p>" + auto.taisnimi() + ", " + auto.aasta +
+        ", " + auto.varv + "</p>";
+
+    let autod = [
+        { mark: "Toyota", mudel: "Corolla", aasta: 2007 },
+        { mark: "Honda", mudel: "Civic", aasta: 2012 },
+        { mark: "Tesla", mudel: "Model 3", aasta: 2019 }
+    ];
+
+    console.log("Kõik autod:");
+    autod.push({ mark: "BMW", mudel: "320i", aasta: 2015 });
+    autod.unshift({ mark: "Ford", mudel: "Focus", aasta: 2020 });
+
+    console.log("Pärast lisamist:");
+    console.log(autod);
+    autod.forEach(function(auto) {
+        console.log(auto.mark + " " + auto.mudel + " (" + auto.aasta + ")");
+    });
+
+    console.log("Esimene auto:", autod[0]);
+    console.log("Esimese auto mark:", autod[0].mark);
+
+
+    let leitudAuto = autod.find(function(auto) {
+        return auto.mark === "Tesla";
+    });
+
+    console.log("Leitud auto:");
+    console.log(leitudAuto);
+
+    let uuemadAutod = autod.filter(function(auto) {
+        return auto.aasta > 2018;
+    });
+
+    console.log("Uuemad autod:");
+    console.log(uuemadAutod);
+
+    autod.sort(function(a, b) {
+        return a.aasta - b.aasta;
+    });
+
+    console.log("Autod aasta järgi:");
+    console.log(autod);
+
+
+    document.getElementById("autod").innerHTML = autod.map(function(auto) {
+        return "<p>" + auto.mark + " " + auto.mudel + " (" + auto.aasta + ")</p>";
+    }).join("");
+
+
+    let raamat = {
+        pealkiri: "Harry Potter",
+        autor: "J. K. Rowling",
+        aasta: 1997,
+
+        kuvaKirjeldus() {
+            return this.pealkiri + " - " + this.autor + ", " + this.aasta;
+        },
+
+        muudaAastat(uusAasta) {
+            this.aasta = uusAasta;
+        }
+    };
+
+    console.log(raamat.kuvaKirjeldus());
+
+    raamat.muudaAastat(2001);
+    console.log("Uus aasta:", raamat.aasta);
+
+    document.getElementById("raamat").innerHTML =
+        "<p>" + raamat.kuvaKirjeldus() + "</p>";
+
+    let raamatukogu = {
+        raamatud: [
+            raamat,
+            { pealkiri: "Tõde ja õigus", autor: "A. H. Tammsaare", aasta: 1926 },
+            { pealkiri: "The Hobbit", autor: "J. R. R. Tolkien", aasta: 1937 },
+            { pealkiri: "The Hunger Games", autor: "Suzanne Collins", aasta: 2008 }
+        ],
+
+        kuvaRaamatud() {
+            this.raamatud.forEach(function(raamat) {
+                console.log(raamat.pealkiri + " - " + raamat.autor);
+            });
+        },
+
+        lisaRaamat(uusRaamat) {
+            this.raamatud.push(uusRaamat);
+        },
+
+        koguArv() {
+            return this.raamatud.length;
+        },
+
+        uuemadRaamatud() {
+            return this.raamatud.filter(function(raamat) {
+                return raamat.aasta > 2000;
+            }).length;
+        },
+
+        otsiAutoriJargi(autor) {
+            return this.raamatud.filter(function(raamat) {
+                return raamat.autor === autor;
+            });
+        }
+    };
+
+    raamatukogu.lisaRaamat({
+        pealkiri: "1984",
+        autor: "George Orwell",
+        aasta: 1949
+    });
+
+    console.log("Kõik raamatud:");
+    raamatukogu.kuvaRaamatud();
+
+    console.log("Raamatute koguarv:", raamatukogu.koguArv());
+    console.log("Pärast 2000. aastat ilmunud raamatuid:",
+        raamatukogu.uuemadRaamatud());
+    console.log("J. K. Rowlingu raamatud:",
+        raamatukogu.otsiAutoriJargi("J. K. Rowling"));
+
+    let raamatuteTekst = "";
+
+    raamatukogu.raamatud.forEach(function(raamat) {
+        raamatuteTekst += "<p>" + raamat.pealkiri + " - " +
+            raamat.autor + " (" + raamat.aasta + ")</p>";
+    });
+
+    document.getElementById("raamatud").innerHTML = raamatuteTekst;
+
+    document.getElementById("statistika").innerHTML =
+        "<p>Raamatute koguarv: " + raamatukogu.koguArv() + "</p>" +
+        "<p>Pärast 2000. aastat ilmunud raamatuid: " +
+        raamatukogu.uuemadRaamatud() + "</p>" +
+        "<p>J. K. Rowlingu raamatuid: " +
+        raamatukogu.otsiAutoriJargi("J. K. Rowling").length + "</p>";
+</script>
 
 </body>
 </html>
