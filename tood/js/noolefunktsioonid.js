@@ -1,7 +1,5 @@
-// Anonüümse funktsiooni näide
-var tervita = function() {
-    console.log("Tere maailm!");
+const noolFunktsioon = () => {
+    console.log("Mark")
 };
 
-// Anonüümse funktsiooni kutsumine
-tervita();
+noolFunktsioon();
