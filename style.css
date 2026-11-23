@@ -76,11 +76,12 @@ nav ul {
     margin: 0;
     padding: 0;
     background-color: rebeccapurple;
-    overflow: hidden;
+    overflow: visible;
 }
 
 nav ul li{
     float: left;
+    position: relative;
 }
 
 nav ul li a{
@@ -100,6 +101,44 @@ nav{
 
 nav ul li a:hover{
     background-color: mediumvioletred;
+}
+
+
+/* alamenüü */
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    background-color: #099;
+    z-index: 100;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    float: none;
+    display: block;
+    width: 200px;
+}
+
+nav ul li ul li a {
+    display: block;
+    background-color: #099;
+    color: white;
+    border-radius: 0;
+    border-bottom: 1px solid white;
+}
+
+nav ul li ul li a:hover {
+    background-color: #3C9;
+    font-weight: 700;
 }
 
 

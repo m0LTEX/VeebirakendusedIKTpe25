@@ -15,3 +15,21 @@ img{
     position: relative;
     height: 100px;
 }
+#fading {
+    width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: aquamarine;
+    border: 2px solid gray;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#fading input {
+    margin: 5px;
+    padding: 8px 15px;
+}
+
+#fadePilt {
+    margin-top: 15px;
+}

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="et">
 <head>
@@ -22,6 +23,23 @@
                 $('#tekstikast').animate({left: '0px'}, 1000);
                 $(this).hide();
                 $('#paremale').show();
+            });
+
+            // Fading efektid
+            $('#fadeIn').click(function () {
+                $('#fadePilt').stop(true, true).fadeIn(2000);
+            });
+
+            $('#fadeOut').click(function () {
+                $('#fadePilt').stop(true, true).fadeOut(2000);
+            });
+
+            $('#fadeToggle').click(function () {
+                $('#fadePilt').stop(true, true).fadeToggle(2000);
+            });
+
+            $('#fadeTo').click(function () {
+                $('#fadePilt').stop(true, true).fadeTo(2000, 0.3);
             });
         });
 
@@ -77,6 +95,23 @@
     </section>
     <div id="koordinaadid"></div>
     <img src="https://img.magnific.com/free-psd/transparent-glass-sphere-study-light-reflection_632498-24532.jpg?semt=ais_hybrid&w=740&q=80" alt="" id="pilt">
+    <section id="fading">
+        <h2>jQuery Fading</h2>
+
+        <p>jQuery abil saab pilti näidata ja peita.</p>
+
+        <p>Vajuta nuppudele ja proovi erinevaid efekte!</p>
+
+        <input type="button" value="toob nähtavale" id="fadeIn">
+        <input type="button" value="peidab" id="fadeOut">
+        <input type="button" value="kui on nähtav, peidab" id="fadeToggle">
+        <input type="button" value="Muudab elemendi läbipaistvuse" id="fadeTo">
+
+        <br><br>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkZ3uVyidntSrxeIsH8G2i4QpLTUpPxRiUYrXWyWe2rw&s=10"
+             id="fadePilt" width="200" alt="Pilt" style="display:none;">
+    </section>
 </main>
 </body>
 </html>
