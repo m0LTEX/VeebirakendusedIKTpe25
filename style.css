@@ -114,7 +114,7 @@ nav ul li ul {
     width: 200px;
     padding: 0;
     margin: 0;
-    background-color: #099;
+    background-color: lightseagreen;
     z-index: 100;
 }
 
@@ -130,14 +130,14 @@ nav ul li ul li {
 
 nav ul li ul li a {
     display: block;
-    background-color: #099;
+    background-color: lightseagreen;
     color: white;
     border-radius: 0;
     border-bottom: 1px solid white;
 }
 
 nav ul li ul li a:hover {
-    background-color: #3C9;
+    background-color: grey;
     font-weight: 700;
 }
 
