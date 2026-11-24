@@ -41,6 +41,29 @@
             $('#fadeTo').click(function () {
                 $('#fadePilt').stop(true, true).fadeTo(2000, 0.3);
             });
+
+            // vihjemullid
+            $('.vihjemull').mouseover(function(e) {
+                var mull = $(this).attr('title');
+
+                $(this).attr('title','');
+
+                $('#vihje').remove();
+                $('body').append('<div id="vihje">' + mull + '</div>');
+
+                $('#vihje').fadeIn(500);
+                $('#vihje').fadeTo(10, 0.9);
+            }).mousemove(function(e) {
+                $('#vihje').css('top', e.pageY + 10 );
+                $('#vihje').css('left', e.pageX + 20 );
+            }).mouseout(function() {
+                var mull = $('#vihje').html();
+
+                $(this).attr('title', mull);
+                $('#vihje').fadeOut(500, function() {
+                    $(this).remove();
+                });
+            });
         });
 
         //värvib teksti punase värviga
@@ -86,11 +109,15 @@
             <br>
             Ametlik CDN asub https://releases.jquery.com/
         </div>
-        <input type="button" value="vasakule" id="vasakule">
-        <input type="button" value="paremale" id="paremale">
+        <input type="button" value="vasakule" id="vasakule"
+               class="vihjemull" title="Liigutab teksti vasakule">
+        <input type="button" value="paremale" id="paremale"
+               class="vihjemull" title="Liigutab teksti paremale">
         <input type="button" value="peida tekst"
+               class="vihjemull" title="Peidab tekstikasti"
                onclick="$('#tekstikast').hide(2000)">
         <input type="button" value="kuva tekst"
+               class="vihjemull" title="Näitab tekstikasti uuesti"
                onclick="$('#tekstikast').show(2000, alert('Kohe kuvatakse tekst'))">
     </section>
     <div id="koordinaadid"></div>
@@ -102,7 +129,8 @@
 
         <p>Vajuta nuppudele ja proovi erinevaid efekte</p>
 
-        <input type="button" value="toob nähtavale" id="fadeIn">
+        <input type="button" value="toob nähtavale" id="fadeIn"
+               class="vihjemull" title="Näitab pildi kahe sekundi jooksul">
         <input type="button" value="peidab" id="fadeOut">
         <input type="button" value="kui on nähtav, peidab" id="fadeToggle">
         <input type="button" value="Muudab elemendi läbipaistvuse" id="fadeTo">

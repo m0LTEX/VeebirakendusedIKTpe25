@@ -1,3 +1,4 @@
+
 #tekstikast, h2{
     position: relative;
     left: 0;
@@ -32,4 +33,17 @@ img{
 
 #fadePilt {
     margin-top: 15px;
+}
+
+/* vihjemull */
+
+#vihje {
+    position: absolute;
+    z-index: 9999;
+    color: white;
+    font-size: 12px;
+    background-color: mediumvioletred;
+    padding: 5px 25px;
+    border-radius: 5px;
+    display: none;
 }
