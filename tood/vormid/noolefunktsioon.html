@@ -2,12 +2,36 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Noolefunktsioonid</title>
-    <script src="../js/noolefunktsioonid.js"></script>
+    <title>Erinevad funktsioonid</title>
 </head>
 <body>
+<h1>Erinevad funktsioonid</h1>
 
+<h2>1. Erinevad funktsioonid</h2>
+<input type="button" value="Klassikaline funktsioon" onclick="nimiKlassikaline()">
+<input type="button" value="Noolefunktsioon" onclick="nimiNool()">
+<div id="vastus1"></div>
 
+<h2>2. Argumendiga funktsioon</h2>
+<label for="kuupaev">Sisesta kuupäev:</label>
+<input type="text" id="kuupaev" value="19.07.25">
+<input type="button" value="Näita kuupäeva" onclick="kuupaevNaitamine()">
+<div id="vastus2"></div>
 
+<h2>3. Teadmata hulk</h2>
+<input type="button" value="Sisesta arvud" onclick="arvutaArvud()">
+<div id="vastus3"></div>
+
+<h2>4. Salajane sõnum</h2>
+<label for="sonum">Sisesta sõnum:</label>
+<input type="text" id="sonum">
+<input type="button" value="Näita salajast sõnumit" onclick="sonumiNaitamine()">
+<div id="vastus4"></div>
+
+<h2>5. Unikaalsed nimed</h2>
+<input type="button" value="Näita nimesid" onclick="nimedeNaitamine()">
+<div id="vastus5"></div>
+
+<script src="../js/noolefunktsioonid.js"></script>
 </body>
 </html>
